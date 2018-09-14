@@ -1,0 +1,31 @@
+<h1>Best Burgers Ever!</h2>
+
+<h2>Please enter the names of the best burgers you have ever tasted!</h2>
+
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="bgrName">Burger Name:</label>
+    <input type="text" id="bgrName" name="name">
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
+
+<h2>Top Notch Burgers</h2>
+
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>These were so good I had to devour them!</h2>
+
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+        {{/if}}
+    {{/each}}
+</ul>
