@@ -17,10 +17,11 @@ $(function() {
     });
     $(".create-form").on("submit", function(event) {
         event.preventDefault();
+        console.log('submit working')
 
         var newBurger = {
             name: $("#bgrName").val().trim(),
-            devoured: $("[name=devoured]:checked").val().trim()
+            devoured: false
         };
     $.ajax("/api/burgers", {
         type: "POST",
